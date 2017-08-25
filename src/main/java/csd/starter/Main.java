@@ -7,8 +7,8 @@ public class Main {
     public static void main(String[] args) {
 
         //Stack
-        System.setIn();
-        System.setOut();
+        //System.setIn();
+        //System.setOut();
     }
 
 }
