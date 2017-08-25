@@ -9,7 +9,7 @@ import static org.junit.Assert.assertEquals;
 
 public class MainTest {
 
-    @Test
+   /* @Test
     public void lambda() {
         Function<Integer, Integer> inc = (i) -> i + 1;
 
@@ -26,6 +26,6 @@ public class MainTest {
 
         Main.main();
 
-    }
+    }*/
 
 }
