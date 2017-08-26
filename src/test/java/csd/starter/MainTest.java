@@ -8,4 +8,5 @@ import java.util.function.Function;
 import static org.junit.Assert.assertEquals;
 
 public class MainTest {
+
 }
