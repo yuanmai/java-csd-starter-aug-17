@@ -22,6 +22,11 @@ public class MainTest {
         Scanner scanner1 = new Scanner(System.in);
 
         System.setIn();
+        /* ByteArrayOutputStream os = new ByteArrayOutputStream();
+PrintStream ps = new PrintStream(os);
+...
+String output = os.toString("UTF8");
+*/
         System.setOut();
 
         Main.main();
