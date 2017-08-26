@@ -15,5 +15,15 @@ public class MainTest {
         assertEquals("Hello World!",Main.helloWorld());
     }
 
+    @ Test
+    public void first_make_reservation_should_be_sucessfully(){
+        assertEquals("Reservation sucessfully",Main.makeReservation("Morning","zhangsan","court1"));
+    }
+
+//    @Test
+//    public void second_time_make_reservation_should_be_failed(){
+//        Main.makeReservation("Morning","zhangsan","court1");
+//        assertEquals("Reservation failed",Main.makeReservation("Morning","lisi","court1"));
+//    }
 
 }
