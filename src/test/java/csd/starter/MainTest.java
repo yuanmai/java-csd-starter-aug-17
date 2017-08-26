@@ -10,5 +10,10 @@ import static org.junit.Assert.assertEquals;
 public class MainTest {
 
 
+    @Test
+    public void test_helloWorld(){
+        assertEquals("Hello World!",Main.helloWorld());
+    }
+
 
 }
