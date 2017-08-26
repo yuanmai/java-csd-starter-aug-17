@@ -13,7 +13,7 @@ public class MainTest {
     public void lambda() {
         Function<Integer, Integer> inc = (i) -> i + 1;
 
-        assertEquals(Integer.valueOf(2), inc.apply(2));
+        assertEquals(Integer.valueOf(3), inc.apply(2));
     }
 
     @Test
@@ -21,10 +21,10 @@ public class MainTest {
         Scanner scanner = new Scanner("fake input");
         Scanner scanner1 = new Scanner(System.in);
 
-        System.setIn();
+   /*     System.setIn();
         System.setOut();
 
-        Main.main();
+        Main.main();*/
 
     }
 

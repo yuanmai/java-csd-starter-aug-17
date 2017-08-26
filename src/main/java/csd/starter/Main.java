@@ -6,9 +6,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Stack
-        System.setIn();
-        System.setOut();
+     //   Stack
+    //    System.setIn();
+    //    System.setOut();
     }
 
 }
