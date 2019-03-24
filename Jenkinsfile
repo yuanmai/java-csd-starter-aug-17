@@ -1,9 +1,9 @@
 pipeline {
     agent any
     stages {
-        stage('Example') {
+        stage('编译') {
             steps {
-                echo 'Hello World'
+                mvn compile
             }
         }
     }
