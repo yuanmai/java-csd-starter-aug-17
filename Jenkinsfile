@@ -19,11 +19,6 @@ pipeline {
         stage('DEV') {
             input {
                 message "部署到DEV环境？"
-                ok "是的"
-                submitter "alice,bob"
-                parameters {
-                    string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
-                }
             }		
             steps {
 		 sh 'echo hhh'
