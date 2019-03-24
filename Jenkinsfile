@@ -19,6 +19,9 @@ pipeline {
         stage('代码扫描') {
             steps {
                 sh "echo mvn sonar:sonar -Dsonar.host.url=http://192.241.210.80:9000"
+            withSonarQubeEnv('SonarQube Octodemoapps') {
+                mvn "sonar:sonar"
+            }		    
             }
         }	    
         stage('打包'){
