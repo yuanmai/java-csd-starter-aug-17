@@ -46,7 +46,7 @@ pipeline {
                 message "部署到SIT环境？"
             }		
             steps {
-		 sh 'echo deploy to sit'
+		 sh 'sh scripts/deploy-sit.sh'
             }
         }	
         stage('部署到UAT') {
@@ -57,7 +57,7 @@ pipeline {
                 message "部署到UAT环境？"
             }		
             steps {
-		 sh 'echo deploy to uat'
+		 sh 'sh scripts/deploy-uat.sh'
             }
         }	    
     }
