@@ -1,18 +1,20 @@
-// Powered by Infostretch 
-
-timestamps {
-
-node () {
-
-	stage ('编译') {
- 			// Maven build step
-	withMaven(maven: '(Default)') { 
- 			if(isUnix()) {
- 				sh "mvn compile " 
-			} else { 
- 				bat "mvn compile " 
-			} 
- 		} 
-	}
-}
+pipeline {
+    agent any
+	
+  tools {
+    maven 'LOCAL_MAVEN'
+  }
+	
+    stages {
+        stage('编译') {
+            steps {
+                 sh 'mvn compile'
+            }
+        }
+    }
+    post { 
+        always { 
+            echo 'I will always say Hello again!'
+        }
+    }
 }
