@@ -1,5 +1,11 @@
 pipeline {
-    agent any
+    agent {
+        label 'jdk8' //对应 http://Jenkins服务器/computer/ 页面下的每个节点的标签
+    }
+
+    triggers {
+        pollSCM 'H/15 * * * *' // 每15分钟检查代码仓库是否有更新，如果有，则触发构建
+    }
 
     tools {
         maven 'MAVEN-3.6.0'// 对应 http://Jenkins服务器/configureTools/  页面下的"Maven 安装"
