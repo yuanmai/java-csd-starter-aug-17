@@ -11,25 +11,10 @@ public class MainTest {
 
     @Test
     public void lambda() {
-        Function<Integer, Integer> inc = (i) -> i + 1;
-
-        assertEquals(Integer.valueOf(2), inc.apply(2));
     }
 
     @Test
     public void uat() {
-        Scanner scanner = new Scanner("fake input");
-        Scanner scanner1 = new Scanner(System.in);
-
-        System.setIn();
-        /* ByteArrayOutputStream os = new ByteArrayOutputStream();
-PrintStream ps = new PrintStream(os);
-...
-String output = os.toString("UTF8");
-*/
-        System.setOut();
-
-        Main.main();
 
     }
 
