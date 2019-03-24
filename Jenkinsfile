@@ -23,7 +23,7 @@ pipeline {
         }	    
         stage('打包'){
             steps{
-                    sh "mvn verify -Pprod -DskipTests"
+                    sh "mvn package -DskipTests"
                     archiveArtifacts artifacts: '**/target/*.war', fingerprint: true
             } 
         }	    
