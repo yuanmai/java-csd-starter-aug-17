@@ -16,7 +16,7 @@ pipeline {
                  sh 'mvn test'
             }
         }
-        stage('Code Analysis') {
+        stage('代码扫描') {
             steps {
                 sh "echo mvn sonar:sonar -Dsonar.host.url=http://192.241.210.80:9000"
             }
@@ -35,7 +35,7 @@ pipeline {
                 message "部署到DEV环境？"
             }		
             steps {
-		 sh 'echo deploy to dev'
+		 sh 'scripts/deploy-dev.sh'
             }
         }	
         stage('部署到SIT') {
