@@ -16,6 +16,17 @@ pipeline {
                  sh 'mvn test'
             }
         }
+        stage('Code Analysis') {
+            steps {
+                sh "echo mvn sonar:sonar -Dsonar.host.url=http://192.241.210.80:9000"
+            }
+        }	    
+        stage('打包'){
+            steps{
+                    sh "mvn verify -Pprod -DskipTests"
+                    archiveArtifacts artifacts: '**/target/*.war', fingerprint: true
+            } 
+        }	    
         stage('部署到DEV') {
            options {
               timeout(time: 30, unit: 'SECONDS') 
