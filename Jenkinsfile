@@ -35,7 +35,7 @@ pipeline {
                 message "部署到DEV环境？"
             }		
             steps {
-		 sh 'scripts/deploy-dev.sh'
+		 sh 'sh scripts/deploy-dev.sh'
             }
         }	
         stage('部署到SIT') {
