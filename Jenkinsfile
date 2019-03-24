@@ -16,15 +16,37 @@ pipeline {
                  sh 'mvn test'
             }
         }
-        stage('DEV') {
+        stage('部署到DEV') {
            options {
-              timeout(time: 10, unit: 'SECONDS') 
+              timeout(time: 30, unit: 'SECONDS') 
            }		
             input {
                 message "部署到DEV环境？"
             }		
             steps {
-		 sh 'echo hhh'
+		 sh 'echo deploy to dev'
+            }
+        }	
+        stage('部署到SIT') {
+           options {
+              timeout(time: 30, unit: 'SECONDS') 
+           }		
+            input {
+                message "部署到SIT环境？"
+            }		
+            steps {
+		 sh 'echo deploy to sit'
+            }
+        }	
+        stage('部署到UAT') {
+           options {
+              timeout(time: 30, unit: 'SECONDS') 
+           }		
+            input {
+                message "部署到UAT环境？"
+            }		
+            steps {
+		 sh 'echo deploy to uat'
             }
         }	    
     }
