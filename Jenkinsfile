@@ -3,7 +3,13 @@ pipeline {
     stages {
         stage('编译') {
             steps {
-                mvn compile
+                withMaven(maven: '(Default)') { 
+                        if(isUnix()) {
+                            sh "mvn compile " 
+                        } else { 
+                            bat "mvn compile " 
+                        } 
+                    } 
             }
         }
     }
