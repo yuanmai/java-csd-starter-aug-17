@@ -20,7 +20,7 @@ pipeline {
             steps {
                 sh "echo mvn sonar:sonar -Dsonar.host.url=http://192.241.210.80:9000"
             withSonarQubeEnv('SonarSever') {
-		    sh "mvn sonar:sonar -Dsonar.password=99b74c87e136d0a14c834cfb0be671e071066da5"
+		    sh "mvn sonar:sonar -Dsonar.login=99b74c87e136d0a14c834cfb0be671e071066da5"
             }		    
             }
         }	    
