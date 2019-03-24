@@ -17,6 +17,9 @@ pipeline {
             }
         }
         stage('DEV') {
+           options {
+              timeout(time: 10, unit: 'SECONDS') 
+           }		
             input {
                 message "部署到DEV环境？"
             }		
